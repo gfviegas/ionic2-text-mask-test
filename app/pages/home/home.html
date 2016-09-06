@@ -1,0 +1,19 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Test</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding class="home">
+  <h2>Text mask TEST</h2>
+  <p>
+    Try to implement a BR Phone mask on the field below!
+  </p>
+  <form [formGroup]="testForm" novalidate="">
+    <ion-item ngControlGroup="contact">
+      <ion-label>Phone</ion-label>
+      <ion-input [formControl]="phone" type="text" [textMask]="{mask: phoneMask}"></ion-input>
+    </ion-item>
+    <p padding-left danger>Field value -> {{phone.value}}</p>
+  </form>
+</ion-content>
